@@ -1,0 +1,82 @@
+@import "tailwindcss";
+
+@theme {
+  --color-lime: #d4ff4f;
+  --color-ink: #0b0d14;
+  --color-ink-2: #121624;
+  --color-paper: #f4f4ef;
+  --color-muted: #5b6270;
+  --color-line: #1e2230;
+  --color-green: #2e7d4f;
+  --font-display: var(--font-display), ui-sans-serif, system-ui, sans-serif;
+  --font-body: var(--font-body), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-mono), ui-monospace, monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #fff;
+  color: var(--color-ink);
+  font-family: var(--font-body);
+  -webkit-font-size-adjust: 100%;
+  overflow-x: hidden;
+}
+
+.font-display {
+  font-family: var(--font-display);
+  letter-spacing: -0.045em;
+  line-height: 0.98;
+  font-weight: 800;
+}
+
+.wrap {
+  margin-inline: auto;
+  width: 100%;
+  max-width: 64rem;
+  padding-inline: 1rem;
+}
+
+.highlight {
+  background: var(--color-lime);
+  border-radius: 0.5rem;
+  padding: 0 0.4rem;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  color: var(--color-ink);
+}
+
+.mono-label {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.grid-bg {
+  background-image:
+    linear-gradient(to right, rgba(11, 13, 20, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(11, 13, 20, 0.04) 1px, transparent 1px);
+  background-size: 80px 80px;
+}
+
+.hero-bg {
+  background:
+    linear-gradient(180deg, #fff 0%, #fff 35%, #f2ffc4 100%);
+}
+
+.card-shadow {
+  box-shadow: 0 20px 50px -20px rgba(11, 13, 20, 0.18);
+}
+
+select,
+input {
+  font: inherit;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-ink);
+  outline-offset: 2px;
+}
