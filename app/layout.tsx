@@ -4,7 +4,7 @@ import "./globals.css";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { StickyCta } from "@/components/StickyCta";
-import { SITE } from "@/data/site";
+import { INDEXABLE, SITE } from "@/data/site";
 
 const display = Schibsted_Grotesk({
   subsets: ["latin"],
@@ -29,6 +29,7 @@ export const metadata: Metadata = {
   description:
     "Compare backlink prices, link building providers and services side by side. Price, authority, turnaround and guarantees in one place.",
   openGraph: { siteName: SITE.name, type: "website" },
+  robots: INDEXABLE ? undefined : { index: false, follow: false },
 };
 
 export const viewport: Viewport = { width: "device-width", initialScale: 1 };

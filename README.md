@@ -27,3 +27,8 @@ npm run lint     # tsc --noEmit
 All providers and prices are **sample data** (`verified: false`). Replace them in
 `data/providers.ts` / `data/price-model.ts`, set each provider's `affiliateUrl`,
 and review the disclosure text in `data/site.ts`.
+
+## Indexing
+
+The site is `noindex` and `robots.txt` disallows everything by default. Set
+`SITE_INDEXABLE=true` in the production environment when real data is live.
